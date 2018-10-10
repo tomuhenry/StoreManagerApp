@@ -143,3 +143,37 @@ h1{
 .flex-login a:hover{
     color: #07c5ff;
 }
+
+@media only screen and (min-width: 150px) and (max-width: 620px){
+    .body{
+        width: 90%;
+        margin: 10px auto;
+        font-size: 90%;
+    }
+
+    .main-header nav {
+        height: 160px;
+    }
+    .main-header nav ul{
+        float: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        text-align: center;     
+    }
+    .main-header nav a:link, .main-header nav a:visited{
+        height: 20px;
+        padding: 10px 25px;
+        display: block;
+    }
+
+    .flex-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-footer{
+        display: none;
+    }
+    
+}
