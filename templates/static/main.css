@@ -162,6 +162,41 @@ input[type="text"] {
     color: #07c5ff;
 }
 
+table, th, td{
+    border: 2px solid white;
+    border-collapse: collapse;
+    padding: 15px;
+    margin: 5px; 
+}
+
+tr:hover{
+    background: #cccccc;
+    color: #000;
+}
+
+.stock-table input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 30px;
+    background: #3cb6fd;
+    font-weight: bold;
+    color: #000000;
+    font-size: 15px;
+    border-radius: 8px;
+}
+.stock-table input[type="text"],
+input[type="number"],
+input[type="date"] {
+    outline: none;
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid #d0e1fa;
+    background: transparent;
+    height: 30px;
+    color: #4eccfd;
+    font-size: 15px;
+}
+
 @media only screen and (min-width: 150px) and (max-width: 600px) {
     .body {
         width: 90%;
@@ -195,5 +230,12 @@ input[type="text"] {
     }
     .main-footer {
         display: none;
+    }
+    
+    table, th, td{
+        border: 1px solid white;
+        border-collapse: collapse;
+        padding: 0;
+        margin: 0; 
     }
 }
