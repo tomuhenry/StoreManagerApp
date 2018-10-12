@@ -23,15 +23,17 @@
     </header>
     <h1>Add User Here</h1>
     <div class="flex-container">
-        <div class="flex-login">
-            <h1>Add User</h1>
-            <input type="text" placeholder="Name"><br>
-            <input type="email" placeholder="Email"><br>
-            <input type="password" placeholder="Password"><br>
-            <input type="password" placeholder="Confirm Password"><br>
-            <input type="submit" value="Login" onclick="buttonClick()">
-            <p><a href="">Forgot Your password?</a></p><br>
-            <p><a href="register.html">Do not have an account?</a></p>
+        <div class="flex-signup">
+            <form action="users.html">
+                <input type="text" placeholder="First Name" required><br>
+                <input type="text" placeholder="Last Name" required><br>
+                <input type="email" placeholder="Email" required><br>
+                <input type="password" placeholder="Password" required><br>
+                <input type="password" placeholder="Confirm Password" required><br>
+                <input type="submit" value="Submit">
+                <button type="reset">Cancel</button>
+            </form>
+            
         </div>
     </div>
     <footer class="main-footer">
