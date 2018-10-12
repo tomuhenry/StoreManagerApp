@@ -1,26 +1,38 @@
-body{
+body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 90%;
     height: 95%;
-    background: #a1e9ffea;
+    background: #a1e9ffbd;
 }
-a{
+
+.login-body {
+    background: none;
+    background-image: url("images/store.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+a {
     text-decoration: none;
     color: yellowgreen;
     font-family: 'comic sans MS';
 }
-h1{
+
+h1 {
     margin: 5px;
     padding: 5px;
     text-align: center;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px #000000;
 }
 
-.flex-container{
+.flex-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-.flex-container div{
+
+.flex-container div {
     display: grid;
     border: 1px #cccccc solid;
     padding: 40px 25px;
@@ -28,7 +40,7 @@ h1{
     flex-basis: 35%;
     min-height: 50px;
     margin: 3px;
-    background: #242424ea;
+    background: #000000f1;
     color: #ffffff;
     top: 40%;
     left: 40%;
@@ -44,35 +56,37 @@ h1{
     -webkit-border-radius: 5px;
     font-size: 120%;
 }
-.main-header nav ul{
+
+.main-header nav ul {
     float: right;
     margin: 0 auto;
 }
 
-.main-header nav ul li{
+.main-header nav ul li {
     display: inline;
 }
 
-.main-header nav a:link, .main-header nav a:visited{
+.main-header nav a:link,
+.main-header nav a:visited {
     color: #ffffff;
     display: inline-block;
     padding: 10px 25px;
     height: 20px;
 }
 
-.main-header nav a:hover{
+.main-header nav a:hover {
     background-color: #23aeff;
     text-shadow: none;
     color: #000000;
 }
 
-.main-header nav ul li a{
+.main-header nav ul li a {
     border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
 }
 
-.main-footer{
+.main-footer {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -82,36 +96,39 @@ h1{
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     background-color: #3baceef5;
-
 }
-.main-footer p{
+
+.main-footer p {
     text-align: center;
     width: 100%;
     margin: 1% auto;
     color: #ffffff;
 }
 
-.flex-login h1{
+.flex-login h1 {
     margin: 0;
     text-align: center;
     font-size: 20px;
     color: #ffffff;
     font-size: 150%;
 }
-.flex-login p{
+
+.flex-login p {
     margin: 0;
     padding: 0;
     font-size: 15px;
     font-weight: 400;
 }
 
-.flex-login input{
+.flex-login input {
     width: 100%;
     margin-bottom: 10px;
     outline: none;
 }
 
-.flex-login input[type="password"], input[type="email"]{
+.flex-login input[type="password"],
+input[type="email"],
+input[type="text"] {
     border: none;
     border-bottom: 1px solid #ffffff;
     background: transparent;
@@ -120,7 +137,7 @@ h1{
     font-size: 14px;
 }
 
-.flex-login input[type="submit"]{
+.flex-login input[type="submit"] {
     border: none;
     outline: none;
     height: 35px;
@@ -130,50 +147,53 @@ h1{
     border-radius: 12px;
 }
 
-.flex-login input[type="submit"]:hover{
+.flex-login input[type="submit"]:hover {
     cursor: pointer;
     background: #07c5ff;
     color: #000;
 }
 
-.flex-login a{
+.flex-login a {
     line-height: 15px;
     color: yellow;
 }
-.flex-login a:hover{
+
+.flex-login a:hover {
     color: #07c5ff;
 }
 
-@media only screen and (min-width: 150px) and (max-width: 620px){
-    .body{
+@media only screen and (min-width: 150px) and (max-width: 600px) {
+    .body {
         width: 90%;
         margin: 10px auto;
         font-size: 90%;
+    }
+    .login-body {
+        background: #a1e9ffbd;
+        background-image: none;
     }
 
     .main-header nav {
         height: 160px;
     }
-    .main-header nav ul{
+    .main-header nav ul {
         float: none;
         margin: 0;
         padding: 0;
         width: 100%;
-        text-align: center;     
+        text-align: center;
     }
-    .main-header nav a:link, .main-header nav a:visited{
+    .main-header nav a:link,
+    .main-header nav a:visited {
         height: 20px;
         padding: 10px 25px;
         display: block;
     }
-
-    .flex-container{
+    .flex-container {
         display: flex;
         flex-direction: column;
     }
-
-    .main-footer{
+    .main-footer {
         display: none;
     }
-    
 }
