@@ -8,22 +8,42 @@
     <link rel="stylesheet" type="text/css" media="screen" href="static/main.css" />
     <script src="static/main.js"></script>
 </head>
-<body>
-    <header class="main-header">
-        <nav>
-            <ul>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="cart.html">Cart</a></li> 
-                <li><a href="profile.html">Profile</a></li> 
-                <li><a href="stock.html">Stock</a></li> 
-            </ul>
-        </nav>
-    </header>
+<body class="login-body">
+    
+    <h1>Welcome to the Store Manager Application</h1> 
     <div class="flex-container">
+        <div class="flex-login">
+            <h1>Admin Login</h1>
+            <form action="stock.html" name="admin-login" method="POST" onsubmit="return adminLog()">
+                <input type="email" placeholder="Email" name="email" required><br>
+                <input type="password" placeholder="Password" name="password" required><br>
+                <input type="submit" value="Login">
+            </form>
+            <p><a href="">Forgot Your password?</a></p><br>
+        </div>
+        <div class="flex-login">
+            <h1>Attendant Login</h1>
+            <form action="cart.html" name="attendant-login" method="POST" onsubmit="return attendantLog()" >
+                <input type="email" placeholder="Email" name="email" required><br>
+                <input type="password" placeholder="Password" name="password" required><br>
+                <input type="submit" value="Login">
+            </form>
+            <p><a href="">Forgot Your password?</a></p><br>
+        </div>
 
-        <a href="login.html">Login here</a>
+        <div class="flex-brief">
+            <strong>Thank you for using the store manager app.</strong><br>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
+            deserunt mollit anim id est laborum.
 
-    </div>     
+        </div>
+
+    </div>
     <footer class="main-footer">
         <p>The Store Management App &copy;Tomusange Henry</p>
     </footer>
