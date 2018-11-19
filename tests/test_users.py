@@ -1,6 +1,7 @@
 from tests import BaseTestCase
 from flask import json
 from api import app
+app.config['TESTING'] = True
 
 sample_user = {
     "name": "tom1 Admin",
@@ -141,7 +142,7 @@ class UserTestCase(BaseTestCase):
         response = self.testclient.get(
             '/store-manager/api/v1/users', headers=self.headers)
         self.assertEqual(response.status_code, 200)
-        self.assertIn(b"Users", response.data)
+        self.assertIn(b"email", response.data)
 
     def test_get_all_users_unauthorized(self):
         self.headers['Authorization'] = "Bearer " + self.access_token2
@@ -172,7 +173,7 @@ class UserTestCase(BaseTestCase):
         response = self.testclient.get(
             '/store-manager/api/v1/users/email', headers=self.headers)
         self.assertEqual(response.status_code, 404)
-        self.assertIn(b"Information could not be found", response.data)
+        self.assertIn(b"Not Found", response.data)
 
     def test_delete(self):
         self.headers['Authorization'] = "Bearer " + self.access_token1
