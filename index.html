@@ -6,21 +6,20 @@
     <title>Store Manager | </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="static/css/main.css" />
-    <script src="static/js/main.js"></script>
 </head>
 <body class="login-body">    
     <h1>Welcome to the Store Manager Application</h1>
     <div class="flex-container">
         <div class="flex-login">
             <h1>Login Here</h1>
-            <form action="admin/index.html" >
-                <input type="email" placeholder="Email" required><br>
-                <input type="password" placeholder="Password" required><br>
+            <form id="login">
+                <input type="email" id="email" placeholder="Email"><br>
+                <input type="password" id="password" placeholder="Password"><br>
                 <input type="submit" value="Login">
             </form>
             <p><a href="">Forgot Your password?</a></p><br>
         </div>
     </div>
-
+    <script src="/static/js/login.js"></script>
 </body>
 </html>
