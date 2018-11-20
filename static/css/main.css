@@ -96,7 +96,7 @@ h2{
 }
 
 .flex-container div{
-    display: grid;
+    /* display: grid; */
     border: 1px #cccccc solid;
     padding: 40px 25px;
     border-radius: 10px;
@@ -108,4 +108,21 @@ h2{
     top: 40%;
     left: 40%;
     -ms-flex-align: center;
+}
+
+.link-button{
+    border: none;
+    outline: none;
+    height: 35px;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    background: #07c5ff;
+    color: #000;
+}
+
+.link-button:hover{
+    background: #239600;
+    color: #ffffff;
 }

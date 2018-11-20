@@ -30,12 +30,17 @@ tr:hover{
     border: none;
     outline: none;
     margin: 4px;
-    height: 20px;
-    background: #fd3c3c;
+    height: 30px;
+    width: 100%;
+    background: #0055b6;
     color: #ffffff;
     font-size: 12px;
     border-radius: 2px;
     cursor: pointer;
+}
+.stock-table input[type="button"]:hover{
+    background: #00b60f;
+    color: #000000;
 }
 .stock-table input[type="text"],
 input[type="number"],

@@ -15,42 +15,29 @@
             <span></span>
         </div>
         <ul>
-            <li id="logout"><a href="../index.html">Logout</a></li>
+            <li id="logout"><a href="#">Logout</a></li>
             <li><a href="index.html">Inventory</a></li>
             <li><a href="users.html">Users</a></li>
             <li><a href="profile.html">Profile</a></li>
         </ul>
 
     </div>
-    <h1>Store Staff</h1>
+    <h1>Add Stock Item Here</h1>
     <div class="flex-container">
         <div class="stock-table">
-            <table>
-                <thead>
-                    <tr>
-                        <th>User ID</th>
-                        <th>User Name</th>
-                        <th>Email</th>
-                        <th>Admin Rights</th>
-                    </tr>
-                </thead>
-                <tbody id="getUsers">
-                      
-                </tbody>
-                
-            </table>
-            <form action="add-user.html">
-                <input type="submit" value="Add User">
+            <form id="addCategory">
+                <h2>Category Name</h2>
+                <input type="text" id="category_name"><br><br>
+                <input type="submit" value="Submit" placeholder="category name">
             </form>
-            
         </div>
-    </div>
-    
+
+    </div>  
     <footer class="main-footer">
         <p>The Store Management App &copy;Tomusange Henry</p>
     </footer>
     <script src="/static/js/main.js"></script>
-    <script src="/static/js/users.js"></script>
     <script src="/static/js/logout.js"></script>
+    <script src="/static/js/products.js"></script>
 </body>
 </html>

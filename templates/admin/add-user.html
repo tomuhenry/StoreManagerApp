@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Store Manager | </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="../static/css/main.css" />
-    <script src="../static/js/main.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="/static/css/main.css" />
 </head>
 <body>
     <div id="sidebar">
@@ -16,8 +15,8 @@
             <span></span>
         </div>
         <ul>
-            <li><a href="../index.html">Logout</a></li>
-            <li><a href="inventory.html">Inventory</a></li>
+            <li id="logout"><a href="../index.html">Logout</a></li>
+            <li><a href="index.html">Inventory</a></li>
             <li><a href="users.html">Users</a></li>
             <li><a href="profile.html">Profile</a></li>
         </ul>
@@ -26,11 +25,11 @@
     <h1>Welcome to the Store Manager Application</h1>
     <div class="flex-container">
         <div class="flex-login">
-            <form action="users.html" method="POST" onsubmit="return validateUser()" name="vform">
-                <input type="text" placeholder="Name" ><br>
-                <input type="email" placeholder="Email" ><br>
-                <input type="password" placeholder="Password" ><br>
-                <input type="password" placeholder="Confirm Password" ><br>
+            <form action="#" id="addUser">
+                <input type="text" placeholder="Name" id="name"><br>
+                <input type="email" placeholder="Email" id="email"><br>
+                <input type="password" placeholder="Password" id="password"><br>
+                <input type="text" placeholder="Admin Rights" id="rights"><br>
                 <input type="submit" value="Register"><br>
             </form>
         </div>
@@ -38,5 +37,8 @@
     <footer class="main-footer">
         <p>The Store Management App &copy;Tomusange Henry</p>
     </footer>
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/users.js"></script>
+    <script src="/static/js/logout.js"></script>
 </body>
 </html>
