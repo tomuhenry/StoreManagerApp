@@ -33,7 +33,7 @@ def register_user():
     if not email or not name or not password:
         abort(400)
 
-    if not rights or rights.type() is not bool:
+    if not rights:
         rights = False
     elif rights == 'admin':
         rights = True

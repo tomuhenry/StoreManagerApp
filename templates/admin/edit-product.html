@@ -15,20 +15,28 @@
             <span></span>
         </div>
         <ul>
-            <li id="logout"><a href="../index.html">Logout</a></li>
+            <li id="logout"><a href="#">Logout</a></li>
             <li><a href="index.html">Inventory</a></li>
             <li><a href="users.html">Users</a></li>
             <li><a href="profile.html">Profile</a></li>
         </ul>
-        
 
     </div>
-    <h1>Store Manager Application</h1>
+    <h1>Edit Product Here</h1>
     <div class="flex-container">
-        
-        <div id="display-item"></div>
-    </div>
-    
+        <div class="stock-table">
+            <form id="editProduct">
+                <label>New Product Name</label>
+                <input type="text" id="product_name"><br>
+                <label>New Stock number</label>
+                <input type="text" id="product_stock"><br>
+                <label>New Unit Price</label>
+                <input type="text" id="product_price"><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+    </div>  
     <footer class="main-footer">
         <p>The Store Management App &copy;Tomusange Henry</p>
     </footer>

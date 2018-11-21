@@ -22,16 +22,16 @@ function loginUser(e){
 
         if (data.admin_token){
         token = `${data.admin_token}`;
-        localStorage.setItem("access_token", token);
+        sessionStorage.setItem("access_token", token);
         window.location ="/templates/admin";
         }
         else if (data.user_token){
             token = `${data.user_token}`;
-            localStorage.setItem("access_token", token);
+            sessionStorage.setItem("access_token", token);
             window.location ="/templates/user";
         }
     })
-    .catch(error => console.log(error))
+    .catch(error => console.error(error));
 }
 
-var access_token = localStorage.getItem("access_token");
+var access_token = sessionStorage.getItem("access_token");

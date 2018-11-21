@@ -22,7 +22,8 @@ function logoutUser(e){
             alert("You must be logged in first");
             window.location ="/index.html";
         }
-        
-    });
-    console.log(access_token);
+        console.log(data);
+    })
+    .catch(error => console.error(error));
+    
 }
