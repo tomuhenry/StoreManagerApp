@@ -1,5 +1,5 @@
 function getUsers(){
-    fetch('https://tomuhenry-storemanagerapp.herokuapp.com/store-manager/api/v1/users', {
+    fetch(user_url, {
         method:'GET',
         headers: {
             'content-type': 'application/json',
@@ -21,6 +21,7 @@ function getUsers(){
         });
         document.getElementById('getUsers').innerHTML = output;
     })
+    // .catch((error) => console.log(error));
 }
 
 if(window.addEventListener) {
@@ -50,5 +51,7 @@ function addUser(e){
     })
     .then((res) => res.json())
     .then((data) => console.log(data))
+    .catch((error) => console.log(error));
+    location.reload();
 
 }

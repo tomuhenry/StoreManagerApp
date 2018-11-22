@@ -15,7 +15,7 @@
             <span></span>
         </div>
         <ul>
-            <li id="logout"><a href="#">Logout</a></li>
+            <li id="logout"><a href="/index.html">Logout</a></li>
             <li><a href="index.html">Inventory</a></li>
             <li><a href="users.html">Users</a></li>
             <li><a href="profile.html">Profile</a></li>
@@ -26,8 +26,15 @@
     
 	<h1>Welcome! What do you want to checkout?</h1> 
     <div class="flex-container">
-        
+        <div>
+            <h2>User Profile</h2>
+            <div id="user-profile">
+                <img id="profile-pic" src="/static/images/profile.png" alt="Profile Picture">
+
+            </div>
+        </div>
         <div id="access-buttons">
+            <h2>Links</h2>
             <div><form action="admin/index.html">
                 <input type="button" value="Products" class="link-button">
             </form></div>
@@ -47,7 +54,6 @@
         <p>The Store Management App &copy;Tomusange Henry</p>
     </footer>
     <script src="/static/js/main.js"></script>
-    <script src="/static/js/logout.js"></script>
-    <script src="/static/js/products.js"></script>
+    <script src="/static/js/profile.js"></script>
 </body>
 </html>

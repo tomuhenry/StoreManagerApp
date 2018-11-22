@@ -15,34 +15,46 @@
             <span></span>
         </div>
         <ul>
-            <li id="logout"><a href="#">Logout</a></li>
+            <li id="logout"><a href="/index.html">Logout</a></li>
             <li><a href="index.html">Inventory</a></li>
             <li><a href="users.html">Users</a></li>
             <li><a href="profile.html">Profile</a></li>
         </ul>
+        
 
     </div>
-    <h1>Add Stock Item Here</h1>
     <div class="flex-container">
         <div class="stock-table">
-            <form id="addProduct">
-                <label>Product Name</label>
-                <input type="text" id="product_name"><br>
-                <label>Product Specifications</label>
-                <input type="text" id="product_specs"><br>
-                <label>Stock number</label>
-                <input type="text" id="product_stock"><br>
-                <label>Unit Price</label>
-                <input type="text" id="product_price"><br>
-                <input type="submit" value="Submit">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Product name</th>
+                        <th>Category</th>
+                        <th>Available Stock</th>
+                        <th>Specifications</th>
+                        <th>Unit Price</th>
+                        <th>View</th>
+                        <th>Delete</th>
+                        <th>Edit</th>
+                    </tr>
+                </thead>
+                <tbody id="getProducts">
+                    
+                </tbody>                
+            </table>
+            <form action="add-stock.html">
+                <input type="submit" id="addItem" value="Add product">
             </form>
+            
         </div>
-
-    </div>  
+        
+    </div>
+    
     <footer class="main-footer">
         <p>The Store Management App &copy;Tomusange Henry</p>
     </footer>
     <script src="/static/js/main.js"></script>
-    <script src="/static/js/add-product.js"></script>
+    <script src="/static/js/users.js"></script>
 </body>
 </html>

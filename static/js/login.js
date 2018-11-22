@@ -18,20 +18,20 @@ function loginUser(e){
     })
     .then((res) => res.json())
     .then((data) => {
-        console.log(data);
-
+        localStorage.setItem("user_email", email);
+        
         if (data.admin_token){
-        token = `${data.admin_token}`;
-        sessionStorage.setItem("access_token", token);
-        window.location ="/templates/admin";
+            token = `${data.admin_token}`;
+            localStorage.setItem("user_type", "admin");
+            localStorage.setItem("access_token", token);
+            window.location ="/templates/admin";
         }
         else if (data.user_token){
             token = `${data.user_token}`;
-            sessionStorage.setItem("access_token", token);
+            localStorage.setItem("user_type", "user");
+            localStorage.setItem("access_token", token);
             window.location ="/templates/user";
         }
     })
-    .catch(error => console.error(error));
+    .catch((error) => console.error(error));
 }
-
-var access_token = sessionStorage.getItem("access_token");

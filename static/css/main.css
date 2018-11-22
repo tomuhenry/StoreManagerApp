@@ -126,3 +126,12 @@ h2{
     background: #239600;
     color: #ffffff;
 }
+
+#profile-pic{
+    padding-bottom: 20px;
+    border-radius: 100px;
+    height: 100px;
+    width: 100px;
+    margin: 0px 120px 20px 10px;
+    position: relative;
+}
