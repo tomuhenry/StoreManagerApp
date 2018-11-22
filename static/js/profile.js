@@ -14,6 +14,6 @@ function userProfile(){
             `;
 
         })
-        .catch(error => console.log(error));
+        .catch((err) => console.log(err));
         document.getElementById('user-profile').innerHTML = output;
 }

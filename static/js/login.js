@@ -33,5 +33,5 @@ function loginUser(e){
             window.location ="/templates/user";
         }
     })
-    .catch((error) => console.error(error));
+    .catch((err) => console.log(err));
 }

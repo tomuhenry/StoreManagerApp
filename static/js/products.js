@@ -25,7 +25,7 @@ function getProducts(){
             });
             document.getElementById('getProducts').innerHTML = output;
         })
-        // .catch((error) => console.log(error));
+        .catch((err) => console.log(err));
     }
 loaderFunction(getProducts);
 
@@ -49,7 +49,7 @@ function getProduct(product_id){
             localStorage.setItem("product", output);
             window.location = '/templates/admin/viewpage.html';
     })
-    // .catch((error) => console.log(error));
+    .catch((err) => console.log(err));
 }
 
 function deleteProduct(product_id){
@@ -62,7 +62,7 @@ function deleteProduct(product_id){
     })
     .then((res) => res.json())
     .then((data) => console.log(data))
-    // .catch((error) => console.log(error));
-    // location.reload();
+    .catch((err) => console.log(err));
+    location.reload();
 }
 

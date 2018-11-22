@@ -15,7 +15,7 @@ function addProduct(e){
     })
     .then((res) => res.json())
     .then((data) => console.log(data))
-    .catch(error => console.log(error));
-    // location.reload();
+    .catch((err) => console.log(err));
+    location.reload();
 
 }

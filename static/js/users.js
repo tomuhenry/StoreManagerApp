@@ -21,7 +21,7 @@ function getUsers(){
         });
         document.getElementById('getUsers').innerHTML = output;
     })
-    // .catch((error) => console.log(error));
+    .catch((err) => console.log(err));
 }
 
 if(window.addEventListener) {
@@ -51,7 +51,7 @@ function addUser(e){
     })
     .then((res) => res.json())
     .then((data) => console.log(data))
-    .catch((error) => console.log(error));
+    .catch((err) => console.log(err));
     location.reload();
 
 }

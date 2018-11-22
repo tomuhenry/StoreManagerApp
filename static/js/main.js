@@ -49,6 +49,6 @@ function logoutUser(e){
         }
         console.log(data);
     })
-    .catch((error) => console.error(error));
+    .catch((err) => console.log(err));
     
 }
