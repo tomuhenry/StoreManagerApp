@@ -16,45 +16,38 @@
         </div>
         <ul>
             <li id="logout"><a href="#">Logout</a></li>
-            <li><a href="index.html">Inventory</a></li>
-            <li><a href="users.html">Users</a></li>
-            <li><a href="profile.html">Profile</a></li>
+            <li><a href="#" onclick="redirectAll('/templates/products.html')">Products</a></li>
+            <li><a href="#" onclick="redirectAdmin('/templates/users.html')">Users</a></li>
+            <li><a href="#" onclick="redirectAdmin('/templates/index.html')">Profile</a></li>
         </ul>
         
 
     </div>
-    
-	<h1>Current Stock and balance</h1> 
     <div class="flex-container">
         <div class="stock-table">
             <table>
                 <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>Product name</th>
-                        <th>Category</th>
-                        <th>Available Stock</th>
-                        <th>Specifications</th>
-                        <th>Unit Price</th>
+                        <th>Sale ID</th>
+                        <th>Product Sold</th>
+                        <th>Quantity Sold</th>
+                        <th>Total Sales</th>
+                        <th>Date Sold</th>
                         <th>View</th>
-                        <th>Delete</th>
-                        <th>Edit</th>
                     </tr>
                 </thead>
-                <tbody id="getProducts">
+                <tbody id="getSales">
                     
                 </tbody>                
             </table>
-            <form action="add-stock.html">
-                <input type="submit" id="addItem" value="Add product">
-            </form>
-            
         </div>
+        
     </div>
+    
     <footer class="main-footer">
         <p>The Store Management App &copy;Tomusange Henry</p>
     </footer>
     <script src="/static/js/main.js"></script>
-    <script src="/static/js/products.js"></script>
+    <script src="/static/js/view-sales.js"></script>
 </body>
 </html>

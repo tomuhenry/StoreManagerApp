@@ -15,33 +15,32 @@
             <span></span>
         </div>
         <ul>
-            <li id="logout"><a href="/index.html">Logout</a></li>
-            <li><a href="index.html">Inventory</a></li>
-            <li><a href="users.html">Users</a></li>
-            <li><a href="profile.html">Profile</a></li>
+            <li id="logout"><a href="#">Logout</a></li>
+            <li><a href="#" onclick="redirectAll('/templates/products.html')">Products</a></li>
+            <li><a href="#" onclick="redirectAdmin('/templates/users.html')">Users</a></li>
+            <li><a href="#" onclick="redirectAdmin('/templates/index.html')">Profile</a></li>
         </ul>
-        
 
     </div>
-    <h1>Make a sale</h1>
+    <h1>Edit Product Here</h1>
     <div class="flex-container">
-        <div>
-            <form id="addSale">
-                <label for="sale-quantity">Quantity Sold</label>
-                <input type="number" id="sale-quantity" placeholder="Number of items"><br><br>
-                <label for="product-sold">Product ID</label>
-                <input type="number" id="product-sold" placeholder="Product ID"><br><br>
-                
+        <div class="stock-table">
+            <form id="editProduct">
+                <label>New Product Name</label>
+                <input type="text" id="product_name"><br>
+                <label>New Stock number</label>
+                <input type="text" id="product_stock"><br>
+                <label>New Unit Price</label>
+                <input type="text" id="product_price"><br>
                 <input type="submit" value="Submit">
             </form>
         </div>
-        
-    </div>
-    
+
+    </div>  
     <footer class="main-footer">
         <p>The Store Management App &copy;Tomusange Henry</p>
     </footer>
     <script src="/static/js/main.js"></script>
-    <script src="/static/js/add-sale.js"></script>
+    <script src="/static/js/edit-product.js"></script>
 </body>
 </html>

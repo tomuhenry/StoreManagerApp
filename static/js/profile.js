@@ -6,14 +6,23 @@ function userProfile(){
         .then((data) => {
             console.log(data);
             output = "";
+            rights = data.rights;
+            if(user_type == "admin"){
+                rights = "Administrator";
+            }
+            else{
+                rights = "Attendant";
+            }
             output += `
             <h1>${data.name}</h1>
-            <h2>User ID =: ${data.user_id}</h2>
-            <h2>User ID =: ${data.email}</h2>
-            <h2>Admin Rights =: ${data.rights}</h2>
+            <h3>User ID : ${data.user_id}</h3>
+            <h3>Email : ${data.email}</h3>
+            <h3>Admin Rights : ${rights}</h3>
             `;
+            document.getElementById('user-profile').innerHTML = output;
 
         })
         .catch((err) => console.log(err));
-        document.getElementById('user-profile').innerHTML = output;
 }
+
+loaderFunction(userProfile);

@@ -15,24 +15,28 @@
             <span></span>
         </div>
         <ul>
-            <li id="logout"><a href="../index.html">Logout</a></li>
-            <li><a href="index.html">Inventory</a></li>
-            <li><a href="users.html">Users</a></li>
-            <li><a href="profile.html">Profile</a></li>
+            <li id="logout"><a href="#">Logout</a></li>
+            <li><a href="#" onclick="redirectAll('/templates/products.html')">Products</a></li>
+            <li><a href="#" onclick="redirectAdmin('/templates/users.html')">Users</a></li>
+            <li><a href="#" onclick="redirectAdmin('/templates/index.html')">Profile</a></li>
         </ul>
-        
 
     </div>
-    <h1>Store Manager Application</h1>
+    <h1>Add Stock Item Here</h1>
     <div class="flex-container">
-        
-        <div id="display-item"></div>
-    </div>
-    
+        <div class="stock-table">
+            <form id="addCategory">
+                <h2>Category Name</h2>
+                <input type="text" id="category_name"><br><br>
+                <input type="submit" value="Submit" placeholder="category name">
+            </form>
+        </div>
+
+    </div>  
     <footer class="main-footer">
         <p>The Store Management App &copy;Tomusange Henry</p>
     </footer>
     <script src="/static/js/main.js"></script>
-    <script src="/static/js/display-product.js"></script>
+    <script src="/static/js/add-category.js"></script>
 </body>
 </html>

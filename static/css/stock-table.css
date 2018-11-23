@@ -43,8 +43,7 @@ tr:hover{
     color: #000000;
 }
 .stock-table input[type="text"],
-input[type="number"],
-input[type="date"] {
+input[type="number"]{
     outline: none;
     border: none;
     width: 100%;

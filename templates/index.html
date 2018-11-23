@@ -15,10 +15,10 @@
             <span></span>
         </div>
         <ul>
-            <li id="logout"><a href="/index.html">Logout</a></li>
-            <li><a href="index.html">Inventory</a></li>
-            <li><a href="users.html">Users</a></li>
-            <li><a href="profile.html">Profile</a></li>
+            <li id="logout"><a href="#">Logout</a></li>
+            <li><a href="#" onclick="redirectAll('/templates/products.html')">Products</a></li>
+            <li><a href="#" onclick="redirectAdmin('/templates/users.html')">Users</a></li>
+            <li><a href="#" onclick="redirectAdmin('/templates/index.html')">Profile</a></li>
         </ul>
         
 
@@ -29,25 +29,38 @@
         <div>
             <h2>User Profile</h2>
             <div id="user-profile">
-                <img id="profile-pic" src="/static/images/profile.png" alt="Profile Picture">
+            </div>
 
+        </div>
+        <div>
+            <h2>Products Links</h2>
+            <div>
+                <form>
+                    <input type="button" value="View Products" onclick="redirectAll('/templates/products.html')" class="link-button"><br><br>
+                    <input type="button" value="Add Product" onclick="redirectAdmin('/templates/add-stock.html')" class="link-button"><br><br>
+                    <!-- <input type="button" value="View Categories" onclick="redirectAdmin('/templates/view-category.html')" class="link-button"><br><br> -->
+                    <input type="button" value="Add Category" onclick="redirectAdmin('/templates/add-category.html')" class="link-button">
+                </form>
             </div>
         </div>
-        <div id="access-buttons">
-            <h2>Links</h2>
-            <div><form action="admin/index.html">
-                <input type="button" value="Products" class="link-button">
-            </form></div>
-            <div><form action="add-stock.html">
-                <input type="button" value="Sales" class="link-button">
-            </form></div>
-            <div><form action="admin/users.html">
-                <input type="button" value="Users" class="link-button">
-            </form></div>
-            <div><form action="admin/profile.html">
-                <input type="button" value="Profile" class="link-button">
-            </form></div>
+        <div>
+            <h2>Sales Links</h2>
+            <div>
+                <form>
+                    <input type="button" value="View Sales" onclick="redirectAdmin('/templates/view-sales.html')" class="link-button"><br><br>
+                    <input type="button" value="Make A Sale" onclick="redirectUser('/templates/add-sale.html')" class="link-button"><br><br>
+                </form>
+            </div>
         </div>
+        <div>
+            <h2>Users Links</h2>
+            <div>
+                <form>
+                    <input type="button" value="View Users" onclick="redirectAdmin('/templates/users.html')" class="link-button"><br><br>
+                    <input type="button" value="Add User" onclick="redirectAdmin('/templates/add-user.html')" class="link-button">
+                </form>
+            </div>
+        </div>       
 
     </div>
     <footer class="main-footer">

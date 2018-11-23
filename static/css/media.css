@@ -10,7 +10,7 @@
     #sidebar {
         width: 30%;
     }
-    .flex-container, .flex-cart {
+    .flex-container {
         display: flex;
         flex-direction: column;
     }
@@ -28,7 +28,7 @@
     
     table{
         margin-right: 0px;
-        background: #000000e7;
+        background: #000000ce;
     }
     
 }

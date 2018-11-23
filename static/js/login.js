@@ -24,14 +24,13 @@ function loginUser(e){
             token = `${data.admin_token}`;
             localStorage.setItem("user_type", "admin");
             localStorage.setItem("access_token", token);
-            window.location ="/templates/admin";
         }
         else if (data.user_token){
             token = `${data.user_token}`;
             localStorage.setItem("user_type", "user");
             localStorage.setItem("access_token", token);
-            window.location ="/templates/user";
         }
+        window.location ="/templates";
     })
     .catch((err) => console.log(err));
 }

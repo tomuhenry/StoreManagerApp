@@ -1,6 +1,6 @@
 function editPage(product_id){
     localStorage.setItem("toEdit", product_id);
-    window.location = "/templates/admin/edit-product.html";
+    redirectAdmin('/templates/edit-product.html');
 }
 
 function getProducts(){
@@ -47,22 +47,31 @@ function getProduct(product_id){
             `;
             console.log(output);
             localStorage.setItem("product", output);
-            window.location = '/templates/admin/viewpage.html';
+            window.location = '/templates/viewpage.html';
     })
     .catch((err) => console.log(err));
 }
 
 function deleteProduct(product_id){
     
-    url = product_url + '/' + product_id;
-    console.log(url);
-    fetch(url, {
-        method:'DELETE',
-        headers: access_headers
-    })
-    .then((res) => res.json())
-    .then((data) => console.log(data))
-    .catch((err) => console.log(err));
-    location.reload();
+    if (user_type == "admin"){
+        url = product_url + '/' + product_id;
+        console.log(url);
+        fetch(url, {
+            method:'DELETE',
+            headers: access_headers
+        })
+        .then((res) => res.json())
+        .then((data) => {
+            console.log(data);
+            output = `${data.Deleted}`;
+            document.getElementById("message").innerHTML = output;
+        })
+        .catch((err) => console.log(err));
+        // location.reload();
+    }
+    else{
+        alert("Only Admin can Perform Delete products");
+    }
 }
 

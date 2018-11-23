@@ -24,6 +24,28 @@ function loaderFunction(myFunc){
     }
 }
 
+function redirectAdmin(page_url){
+    if(user_type == "admin"){
+        window.location = page_url;
+    }
+    else{
+        alert("Only Administrator can access this page");
+    }
+}
+
+function redirectUser(page_url){
+    if(user_type == "user"){
+        window.location = page_url;
+    }
+    else{
+        alert("Only Attendant can access this page");
+    }
+}
+
+function redirectAll(page_url){
+    window.location = page_url;
+}
+
 function toggleSidebar(){
     document.getElementById("sidebar").classList.toggle('active');
 }
@@ -47,7 +69,6 @@ function logoutUser(e){
             alert("You must be logged in first");
             window.location ="/index.html";
         }
-        console.log(data);
     })
     .catch((err) => console.log(err));
     
