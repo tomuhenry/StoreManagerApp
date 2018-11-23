@@ -19,7 +19,7 @@ function editProduct(e){
     .then((data) => {
         console.log(data);
     })
+    .then(() =>location.reload())
     .catch((err) => console.log(err));
-    // location.reload();
 
 }

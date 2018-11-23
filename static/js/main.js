@@ -1,8 +1,10 @@
-var access_token = localStorage.getItem("access_token");
-var myproduct = localStorage.getItem("product");
-var editproduct = localStorage.getItem("toEdit");
-var user_type = localStorage.getItem("user_type");
-var user_email = localStorage.getItem("user_email");
+var access_token = sessionStorage.getItem("access_token");
+var myproduct = sessionStorage.getItem("product");
+var myuser = sessionStorage.getItem("user");
+var mysale = sessionStorage.getItem("sale");
+var editproduct = sessionStorage.getItem("toEdit");
+var user_type = sessionStorage.getItem("user_type");
+var user_email = sessionStorage.getItem("user_email");
 
 const product_url = 'https://tomuhenry-storemanagerapp.herokuapp.com/store-manager/api/v1/admin/products';
 const category_url = 'https://tomuhenry-storemanagerapp.herokuapp.com/store-manager/api/v1/category';
@@ -62,7 +64,7 @@ function logoutUser(e){
     .then((res) => res.json())
     .then((data) => {
         if (access_token != null){
-            localStorage.removeItem("access_token");
+            sessionStorage.removeItem("access_token");
             window.location ="/index.html";
         }
         else {

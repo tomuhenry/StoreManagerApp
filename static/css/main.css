@@ -1,7 +1,6 @@
 @import "media.css";
 @import "login.css";
 @import "stock-table.css";
-@import "cart.css";
 
 body{
     margin: 0px;
@@ -99,13 +98,13 @@ h2{
     border: 1px #cccccc solid;
     padding: 40px 25px;
     border-radius: 10px;
-    flex-basis: 25%;
-    min-height: 30px;
-    margin: 0px;
+    flex-basis: 30%;
+    min-height: 40px;
+    margin: 2px;
     background: #000000e7;
     color: #ffffff;
-    top: 20%;
-    left: 20%;
+    top: 25%;
+    left: 25%;
     -ms-flex-align: center;
 }
 
@@ -128,9 +127,16 @@ h2{
 
 span{
     color: red;
-    text-align: center;
-    font-size: 15px;
+    text-align: right;
     font: bold;
     font-style: italic;
     font-family: verdana;
+}
+
+select{
+    height: 25px;
+    border-radius: 5px;
+    color: #ffffff;
+    background: #000000a4;
+    margin: 10px;
 }

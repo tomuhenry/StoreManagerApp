@@ -13,7 +13,7 @@ function addSale(e){
     })
     .then((res) => res.json())
     .then((data) => console.log(data))
+    .then(() =>location.reload())
     .catch((err) => console.log(err));
-    // location.reload();
 
 }

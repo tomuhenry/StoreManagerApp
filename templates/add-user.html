@@ -18,7 +18,7 @@
             <li id="logout"><a href="#">Logout</a></li>
             <li><a href="#" onclick="redirectAll('/templates/products.html')">Products</a></li>
             <li><a href="#" onclick="redirectAdmin('/templates/users.html')">Users</a></li>
-            <li><a href="#" onclick="redirectAdmin('/templates/index.html')">Profile</a></li>
+            <li><a href="#" onclick="redirectAll('/templates/index.html')">Profile</a></li>
         </ul>
 
     </div>
@@ -29,15 +29,21 @@
                 <input type="text" placeholder="Name" id="name"><br>
                 <input type="email" placeholder="Email" id="email"><br>
                 <input type="password" placeholder="Password" id="password"><br>
-                <input type="text" placeholder="Admin Rights" id="rights"><br>
+                <!-- <input type="" placeholder="Admin Rights" id="rights"><br> -->
+                <label for="Rights">Rights: </label>
+                <select name="Rights" id="rights">
+                    <option value="True">Administrator</option>
+                    <option value="False">Attendant</option>
+                </select>
                 <input type="submit" value="Register"><br>
             </form>
+            <span id="message"></span>
         </div>
     </div>
     <footer class="main-footer">
         <p>The Store Management App &copy;Tomusange Henry</p>
     </footer>
     <script src="/static/js/main.js"></script>
-    <script src="/static/js/users.js"></script>
+    <script src="/static/js/add-user.js"></script>
 </body>
 </html>

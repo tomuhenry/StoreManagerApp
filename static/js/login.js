@@ -18,19 +18,23 @@ function loginUser(e){
     })
     .then((res) => res.json())
     .then((data) => {
-        localStorage.setItem("user_email", email);
+        sessionStorage.setItem("user_email", email);
         
         if (data.admin_token){
             token = `${data.admin_token}`;
-            localStorage.setItem("user_type", "admin");
-            localStorage.setItem("access_token", token);
+            sessionStorage.setItem("user_type", "admin");
+            sessionStorage.setItem("access_token", token);
+            window.location ="/templates";
         }
         else if (data.user_token){
             token = `${data.user_token}`;
-            localStorage.setItem("user_type", "user");
-            localStorage.setItem("access_token", token);
+            sessionStorage.setItem("user_type", "user");
+            sessionStorage.setItem("access_token", token);
+            window.location ="/templates";
         }
-        window.location ="/templates";
+        else{
+            document.getElementById("message").innerHTML = `${data.Alert}`;
+        }
     })
     .catch((err) => console.log(err));
 }

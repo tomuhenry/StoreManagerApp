@@ -29,7 +29,7 @@ function addProduct(e){
         document.getElementById('message').innerHTML = output;
         
     })
+    .then(() =>location.reload())
     .catch((err) => console.log(err));
-    // location.reload();
 
 }
