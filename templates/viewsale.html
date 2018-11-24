@@ -22,30 +22,17 @@
             <li><a href="#" onclick="redirectAdmin('/templates/view-sales.html')">Sales</a></li>
             <li><a href="#" onclick="redirectUser('/templates/add-sale.html')">Profile</a></li>
         </ul>
-
+        
     </div>
-    <h1>Add Stock Item Here</h1>
-    <div class="flex-container">
-        <div class="flex-login">
-            <form id="addProduct">
-                <label>Product Name</label>
-                <input type="text" id="product_name"><br><br>
-                <label>Product Specifications</label>
-                <input type="text" id="product_specs"><br><br>
-                <label>Stock number</label>
-                <input type="text" id="product_stock"><br><br>
-                <label>Unit Price</label>
-                <input type="text" id="product_price"><br><br>
-                <span id="message"></span><br>
-                <input type="submit" value="Submit">
-            </form>
-        </div>
-
-    </div>  
+    <h1>Store Manager Application</h1>
+    <div class="flex-container">  
+        <div id="display-sale"></div>
+    </div>
+    
     <footer class="main-footer">
         <p>The Store Management App &copy;Tomusange Henry</p>
     </footer>
     <script src="/static/js/main.js"></script>
-    <script src="/static/js/add-product.js"></script>
+    <script src="/static/js/display-sale.js"></script>
 </body>
 </html>

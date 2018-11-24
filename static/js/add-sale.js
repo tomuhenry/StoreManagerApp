@@ -12,7 +12,16 @@ function addSale(e){
         body:JSON.stringify({sale_quantity:sale_quantity, product_sold:product_sold})
     })
     .then((res) => res.json())
-    .then((data) => console.log(data))
+    .then((data) => {
+        console.log(data);
+        if(data.Success){
+            output = `${data.Success}`;
+        }
+        else if(data.Sorry){
+            output = `${data.Sorry}`;
+        }
+        document.getElementById('message').innerHTML = output;
+    })
     .then(() =>location.reload())
     .catch((err) => console.log(err));
 

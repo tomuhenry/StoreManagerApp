@@ -57,9 +57,9 @@ function getUser(user_id){
         }
         output += `
         <h1>${data.name}</h1>
-        <h3>User ID : ${data.user_id}</h3>
-        <h3>Email : ${data.email}</h3>
-        <h3>Admin Rights : ${rights}</h3>
+        <h3>User ID : <i>${data.user_id}</i></h3>
+        <h3>Email : <i>${data.email}</i></h3>
+        <h3>Admin Rights : <i>${rights}</i></h3>
         `;
         console.log(output);        
         sessionStorage.setItem("user", output);
@@ -73,18 +73,25 @@ function deleteUser(email){
     if (user_type == "admin"){
         url = user_url + '/' + email;
         console.log(url);
-        fetch(url, {
-            method:'DELETE',
-            headers: access_headers
-        })
-        .then((res) => res.json())
-        .then((data) => {
-            console.log(data);
-            output = `${data.Deleted}`;
-            document.getElementById("message").innerHTML = output;
-        })
-        .then(() =>location.reload())
-        .catch((err) => console.log(err));
+        const confirmation = window.confirm("Are you sure about this action?");
+        if(confirmation){
+            fetch(url, {
+                method:'DELETE',
+                headers: access_headers
+            })
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data);
+                output = `${data.Deleted}`;
+                document.getElementById("message").innerHTML = output;
+            })
+            .then(() =>location.reload())
+            .catch((err) => console.log(err));
+        }
+        else{
+            alert("Delete has been cancled!");
+        }
+        
         
     }
     else{
