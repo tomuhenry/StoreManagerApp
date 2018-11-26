@@ -20,6 +20,8 @@ function getProducts(){
                     <td><input type="button" onclick="getProduct(${product.product_id})" value="View"></td>
                     <td><input type="button" onclick="deleteProduct(${product.product_id})" value="Delete"></td>
                     <td><input type="button" onclick="editPage(${product.product_id})" value="Edit"></td>
+                    <td><input type="button" onclick="addCategory(${product.product_id})" value="Category"></td>
+
                 </tr>
                 `;
             });
@@ -80,5 +82,48 @@ function deleteProduct(product_id){
     else{
         alert("Only Admin can Perform Delete products");
     }
+}
+
+function addCategory(product_id){
+    
+    url = 'https://tomuhenry-storemanagerapp.herokuapp.com/store-manager/api/v1/products/category/' + product_id;
+    console.log(url);
+
+    var category_id;
+    category_id = prompt("Enter category ID: ");
+    let category_type = Number(category_id);
+
+    // url2 = "https://tomuhenry-storemanagerapp.herokuapp.com/store-manager/api/v1/category/" + category_id;
+    // category = fetch(url2, {
+    //     headers: access_headers
+    // })
+    // .then((res) => res.json())
+    // .then((data) => {
+    //     cat_name = `${data[0].category_name}`;
+    //     return cat_name;
+    //     // console.log(cat_name);
+    // });
+    // console.log(category.PromiseValue);
+    
+    fetch(url, {
+        method:'PUT',
+        headers: access_headers,
+        body:JSON.stringify({category_type:category_type})
+    })
+    .then((res) => res.json())
+    .then((data) => {
+        console.log(data);
+        if(data.Added){
+            document.getElementById("message").innerHTML=`${data.Added}`;
+        }
+        else if(data.error){
+            document.getElementById("message").innerHTML=`${data.error}`;
+        }
+        else{
+            document.getElementById("message").innerHTML="Could not add product to category";
+        }
+    })
+    .then(() =>location.reload())
+    .catch((err) => console.log(err));
 }
 

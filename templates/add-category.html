@@ -24,14 +24,31 @@
         </ul>
 
     </div>
-    <h1>Add Stock Item Here</h1>
+    <h1>Add and View Category Here</h1>
     <div class="flex-container">
+        
         <div class="flex-login">
             <form id="addCategory">
-                <h2>Category Name</h2>
-                <input type="text" id="category_name"><br><br>
+                <h2>New Category Name</h2>
+                <input type="text" id="category_name"><br>
                 <input type="submit" value="Submit" placeholder="category name">
             </form>
+        </div>
+        <div id="category-view" class="stock-table">
+            <h2>Category Table</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category ID</th>
+                        <th>Category name</th>
+                        <th>Products</th>
+                    </tr>
+                </thead>
+                <tbody id="getCategories">
+                    
+                </tbody>                
+            </table>
+            <span id="message"></span><br>
         </div>
 
     </div>  

@@ -18,8 +18,9 @@ function editProduct(e){
     .then((res) => res.json())
     .then((data) => {
         console.log(data);
+        document.getElementById("message").innerHTML=`${data.Updated}`;
     })
-    .then(() =>location.reload())
+    .then(() =>window.location = '/templates/products.html')
     .catch((err) => console.log(err));
 
 }

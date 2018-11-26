@@ -20,6 +20,9 @@ function addSale(e){
         else if(data.Sorry){
             output = `${data.Sorry}`;
         }
+        else{
+            output = `${data.error}`;
+        }
         document.getElementById('message').innerHTML = output;
     })
     .then(() =>location.reload())

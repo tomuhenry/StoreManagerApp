@@ -1,5 +1,6 @@
 document.getElementById("addCategory").addEventListener("submit", addCategory);
 
+
 function addCategory(e){
     e.preventDefault();
 
@@ -13,5 +14,76 @@ function addCategory(e){
     .then((res) => res.json())
     .then((data) => console.log(data))
     .then(() =>location.reload())
+    .catch((err) => console.log(err));
+}
+
+function getCategories(){
+    fetch(category_url, {
+        headers: access_headers
+    })
+    .then((res) => res.json())
+    .then((data) => {
+        output = "";
+        data.forEach(function(category){
+            output += `
+            <tr>
+                <td>${category.category_id}</td>
+                <td>${category.category_name}</td>
+                <td><input type="button" onclick="getCategory(${category.category_id})" value="Products"></td>
+
+            </tr>
+            `;
+        });
+        document.getElementById('getCategories').innerHTML = output;
+    })
+    .catch((err) => console.log(err));
+}
+loaderFunction(getCategories);
+
+function getCategory(category_id){
+    url = "https://tomuhenry-storemanagerapp.herokuapp.com/store-manager/api/v1/category/" + category_id;
+    fetch(url, {
+        headers: access_headers
+    })
+    .then((res) => res.json())
+    .then((data) => {
+        // console.log(data)
+        cat_name = `${data.category_name}`;
+        // data.forEach(function(category){
+        //     output += `
+        //     <tr>
+        //         <td>${category.category_id}</td>
+        //         <td>${category.category_name}</td>
+        //         <td><input type="button" onclick="categoryProducts(${category.category_id})" value="Products"></td>
+
+        //     </tr>
+        //     `;
+        // });
+        // document.getElementById('getCategories').innerHTML = output;
+    })
+    .catch((err) => console.log(err));
+}
+
+function categoryProducts(category_id){
+    url = "https://tomuhenry-storemanagerapp.herokuapp.com/store-manager/api/v1/category/" + category_id;
+    fetch(url, {
+        headers: access_headers
+    })
+    .then((res) => res.json())
+    .then((data) => {
+        console.log(data)
+        // output = "";
+        // data.forEach(function(category){
+        //     output += `
+        //     <tr>
+        //         <td>${category.category_id}</td>
+        //         <td>${category.category_name}</td>
+        //         <td><input type="button" onclick="categoryProducts(${category.category_id})" value="Products"></td>
+
+        //     </tr>
+        //     `;
+        // });
+        // document.getElementById('getCategories').innerHTML = output;
+    })
     .catch((err) => console.log(err));
 }

@@ -10,7 +10,7 @@ function userProfile(){
             if(user_type == "admin"){
                 rights = "Administrator";
             }
-            else{
+            else if(user_type == "user"){
                 rights = "Attendant";
             }
             output += `

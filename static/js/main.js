@@ -64,13 +64,14 @@ function logoutUser(e){
     .then((res) => res.json())
     .then((data) => {
         if (access_token != null){
-            sessionStorage.removeItem("access_token");
+            sessionStorage.clear();
             window.location ="/index.html";
         }
         else {
             alert("You must be logged in first");
             window.location ="/index.html";
         }
+        console.log(data);
     })
     .catch((err) => console.log(err));
     
