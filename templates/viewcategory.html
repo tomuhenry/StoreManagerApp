@@ -24,39 +24,17 @@
             <li><a href="#" onclick="redirectUser('/templates/add-sale.html')">Make Sale</a></li>
         </ul>
         
+    </div>
+    <h1>Store Manager Application</h1>
+    <div class="flex-container" id="display-products"> 
 
     </div>
     
-	<h1>Current Stock and balance</h1> 
-    <div class="flex-container">
-        <div class="stock-table">
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Product name</th>
-                        <th>Category</th>
-                        <th>Available Stock</th>
-                        <th>Specifications</th>
-                        <th>Unit Price</th>
-                        <th>Delete</th>
-                        <th>Edit</th>
-                        <th>Add to Category</th>
-                    </tr>
-                </thead>
-                <tbody id="getProducts">
-                    
-                </tbody>                
-            </table>
-            <span id="message"></span><br>
-            <input type="submit" value="Add Product" onclick="redirectAdmin('/templates/add-stock.html')">
-            
-        </div>
-    </div>
     <footer class="main-footer">
         <p>The Store Management App &copy;Tomusange Henry</p>
     </footer>
     <script src="/static/js/main.js"></script>
-    <script src="/static/js/products.js"></script>
+    <script src="/static/js/display-category.js"></script>
+    
 </body>
 </html>

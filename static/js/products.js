@@ -12,12 +12,11 @@ function getProducts(){
                 output += `
                 <tr>
                     <td>${product.product_id}</td>
-                    <td>${product.product_name}</td>
+                    <td onclick="getProduct(${product.product_id})">${product.product_name}</td>
                     <td>${product.category_type}</td>
                     <td>${product.product_stock}</td>
                     <td>${product.product_specs}</td>
                     <td>${product.product_price}/=</td>
-                    <td><input type="button" onclick="getProduct(${product.product_id})" value="View"></td>
                     <td><input type="button" onclick="deleteProduct(${product.product_id})" value="Delete"></td>
                     <td><input type="button" onclick="editPage(${product.product_id})" value="Edit"></td>
                     <td><input type="button" onclick="addCategory(${product.product_id})" value="Category"></td>
@@ -92,18 +91,6 @@ function addCategory(product_id){
     var category_id;
     category_id = prompt("Enter category ID: ");
     let category_type = Number(category_id);
-
-    // url2 = "https://tomuhenry-storemanagerapp.herokuapp.com/store-manager/api/v1/category/" + category_id;
-    // category = fetch(url2, {
-    //     headers: access_headers
-    // })
-    // .then((res) => res.json())
-    // .then((data) => {
-    //     cat_name = `${data[0].category_name}`;
-    //     return cat_name;
-    //     // console.log(cat_name);
-    // });
-    // console.log(category.PromiseValue);
     
     fetch(url, {
         method:'PUT',

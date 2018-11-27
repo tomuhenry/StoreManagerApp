@@ -13,6 +13,7 @@ table{
 tr:hover{
     background: #cccccc;
     color: #000;
+    cursor: pointer;
 }
 
 .stock-table input[type="submit"]{

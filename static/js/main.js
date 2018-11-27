@@ -5,6 +5,7 @@ var mysale = sessionStorage.getItem("sale");
 var editproduct = sessionStorage.getItem("toEdit");
 var user_type = sessionStorage.getItem("user_type");
 var user_email = sessionStorage.getItem("user_email");
+var category_products = sessionStorage.getItem("cat_products");
 
 const product_url = 'https://tomuhenry-storemanagerapp.herokuapp.com/store-manager/api/v1/admin/products';
 const category_url = 'https://tomuhenry-storemanagerapp.herokuapp.com/store-manager/api/v1/category';

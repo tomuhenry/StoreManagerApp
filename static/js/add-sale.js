@@ -20,8 +20,11 @@ function addSale(e){
         else if(data.Sorry){
             output = `${data.Sorry}`;
         }
-        else{
+        else if(data.error){
             output = `${data.error}`;
+        }
+        else{
+            output = "Could not make sale report";
         }
         document.getElementById('message').innerHTML = output;
     })

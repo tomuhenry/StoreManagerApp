@@ -17,6 +17,7 @@
         <ul>
             <li id="logout"><a href="#">Logout</a></li>
             <li><a href="#" onclick="redirectAll('/templates/products.html')">Products</a></li>
+            <li><a href="#" onclick="redirectAdmin('/templates/add-category.html')">Category</a></li>
             <li><a href="#" onclick="redirectAdmin('/templates/users.html')">Users</a></li>
             <li><a href="#" onclick="redirectAll('/templates/index.html')">Profile</a></li>
             <li><a href="#" onclick="redirectAdmin('/templates/view-sales.html')">Sales</a></li>
@@ -31,6 +32,7 @@
             <form id="addCategory">
                 <h2>New Category Name</h2>
                 <input type="text" id="category_name"><br>
+                <span id="message"></span>
                 <input type="submit" value="Submit" placeholder="category name">
             </form>
         </div>
