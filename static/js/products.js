@@ -106,6 +106,9 @@ function addCategory(product_id){
         else if(data.error){
             document.getElementById("message").innerHTML=`${data.error}`;
         }
+        else if(data.Alert){
+            document.getElementById("message").innerHTML=`${data.Alert}`;
+        }
         else{
             document.getElementById("message").innerHTML="Could not add product to category";
         }

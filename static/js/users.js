@@ -1,10 +1,7 @@
 function getUsers(){
     fetch(user_url, {
         method:'GET',
-        headers: {
-            'content-type': 'application/json',
-            'Authorization': "Bearer " + access_token
-        }
+        headers: access_headers
     })
     .then((res) => res.json())
     .then((data) => {
@@ -19,10 +16,9 @@ function getUsers(){
             output += `
             <tr>
                 <td>${user.user_id}</td>
-                <td>${user.name}</td>
+                <td onclick="getUser(${user.user_id})">${user.name}</td>
                 <td>${user.email}</td>
                 <td>${rights}</td>
-                <td><input type="button" onclick="getUser(${user.user_id})" value="View"></td>
                 <td><input type="button" onclick="deleteUser('${user.email}')" value="Delete"></td>
                 <td><input type="button" onclick="editUser(${user.user_id})" value="Edit"></td>
             </tr>
@@ -38,10 +34,6 @@ loaderFunction(getUsers);
 function getUser(user_id){
     
     url = user_url + '/' + user_id;
-    console.log(url, {
-        method:'GET',
-        headers: access_headers
-        });
     fetch(url, {
         headers: access_headers
     })
@@ -90,11 +82,35 @@ function deleteUser(email){
         }
         else{
             alert("Delete has been cancled!");
-        }
-        
+        }   
         
     }
     else{
         alert("Only Admin can Perform Delete userss");
     }
+}
+
+function editUser(user_id){
+    url = user_url + '/' + user_id;
+    new_rights = window.confirm("Are you sure you want to change Administrator rights?\n Press 'OK' for Administrator \n Press 'Cancel' for Attendant");
+    
+    if(new_rights == true){
+        rights = true;
+    }
+    else{
+        rights = false;
+    }
+    fetch(url, {
+        method: 'PUT',
+        headers: access_headers,
+        body:JSON.stringify({rights:rights})
+    })
+    .then((res) => res.json())
+    .then((data) => {
+        console.log(data);
+        document.getElementById("message").innerHTML=`${data.Modified}`;
+    })
+    .then(() =>location.reload())
+    .catch((err) => console.log(err));
+
 }
