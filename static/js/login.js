@@ -32,8 +32,11 @@ function loginUser(e){
             sessionStorage.setItem("access_token", token);
             window.location ="/templates";
         }
-        else{
+        else if(data.Alert){
             document.getElementById("message").innerHTML = `${data.Alert}`;
+        }
+        else{
+            document.getElementById("message").innerHTML = "Failed to login"
         }
     })
     .catch((err) => console.log(err));
