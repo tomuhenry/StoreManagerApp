@@ -66,11 +66,11 @@ function logoutUser(e){
     .then((data) => {
         if (access_token != null){
             sessionStorage.clear();
-            window.location ="/home.html";
+            window.location ="/";
         }
         else {
             alert("You must be logged in first");
-            window.location ="/home.html";
+            window.location ="/";
         }
         console.log(data);
     })
