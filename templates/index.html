@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Store Manager | </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="/static/css/main.css" />
+</head>
+<body>
+    <div id="sidebar">
+        <div class="toggle-btn" onclick="toggleSidebar()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li id="logout"><a href="#">Logout</a></li>
+            <li><a href="#" onclick="redirectAll('/templates/products.html')">Products</a></li>
+            <li><a href="#" onclick="redirectAdmin('/templates/add-category.html')">Category</a></li>
+            <li><a href="#" onclick="redirectAdmin('/templates/users.html')">Users</a></li>
+            <li><a href="#" onclick="redirectAll('/templates/index.html')">Profile</a></li>
+            <li><a href="#" onclick="redirectAdmin('/templates/view-sales.html')">Sales</a></li>
+            <li><a href="#" onclick="redirectUser('/templates/add-sale.html')">Make Sale</a></li>
+        </ul>
+        
+
+    </div>
+    
+	<h1>Welcome! What do you want to checkout?</h1> 
+    <div class="flex-container">
+        <div class="flex-login">
+            <h2>User Profile</h2>
+            <div id="user-profile">
+            </div>
+
+        </div>
+        <div>
+            <h2>Products Links</h2>
+            <div>
+                <form>
+                    <input type="button" value="View Products" onclick="redirectAll('/templates/products.html')" class="link-button"><br><br>
+                    <input type="button" value="Add Product" onclick="redirectAdmin('/templates/add-stock.html')" class="link-button"><br><br>
+                    <input type="button" value="Categories" onclick="redirectAdmin('/templates/add-category.html')" class="link-button">
+                </form>
+            </div>
+        </div>
+        <div>
+            <h2>Sales Links</h2>
+            <div>
+                <form>
+                    <input type="button" value="View Sales" onclick="redirectAdmin('/templates/view-sales.html')" class="link-button"><br><br>
+                    <input type="button" value="Make A Sale" onclick="redirectUser('/templates/add-sale.html')" class="link-button"><br><br>
+                </form>
+            </div>
+        </div>
+        <div>
+            <h2>Users Links</h2>
+            <div>
+                <form>
+                    <input type="button" value="View Users" onclick="redirectAdmin('/templates/users.html')" class="link-button"><br><br>
+                    <input type="button" value="Add User" onclick="redirectAdmin('/templates/add-user.html')" class="link-button">
+                </form>
+            </div>
+        </div>       
+
+    </div>
+    <footer class="main-footer">
+        <p>The Store Management App &copy;Tomusange Henry</p>
+    </footer>
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/profile.js"></script>
+</body>
+</html>

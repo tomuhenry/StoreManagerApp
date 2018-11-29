@@ -1,0 +1,142 @@
+@import "media.css";
+@import "login.css";
+@import "stock-table.css";
+
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 90%;
+    height: 95%;
+    background: #d5f1fad3;
+}
+h1{
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    font-size: 35px;
+    color: #ffffff;
+    text-shadow: 3px 3px 5px #000000;
+}
+h2{
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    font-size: 25px;
+}
+
+#sidebar {
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background: #53a1f0ec;
+    left: -200px;
+    transition: all 400ms linear;
+}
+
+#sidebar.active{
+    left: 0px;
+}
+
+#sidebar ul li{
+    text-align: center;
+    list-style: none;
+    padding: 15px 10px;
+    border-bottom: 1px solid #000;
+    cursor: pointer;
+}
+
+#sidebar .toggle-btn{
+    position: absolute;
+    left: 205px;
+    top: 15px;
+    cursor: pointer;
+}
+#sidebar .toggle-btn span{
+    display: block;
+    width: 30px;
+    height: 5px;
+    background: #151719;
+    margin: 5px 0px;
+}
+
+#sidebar a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 120%;
+    padding: 15px;
+}
+#sidebar ul li:hover{
+    background: #125394;
+}
+
+.main-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.main-footer p {
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+    margin: 1% auto;
+    color: #ffffff;
+    text-shadow: 2px 2px 3px #000000;
+}
+
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flex-container div{
+    border: 1px #cccccc solid;
+    padding: 40px 25px;
+    border-radius: 10px;
+    flex-basis: 30%;
+    min-height: 40px;
+    margin: 2px;
+    background: #000000e7;
+    color: #ffffff;
+    top: 25%;
+    left: 25%;
+    -ms-flex-align: center;
+}
+
+.link-button{
+    border: none;
+    outline: none;
+    height: 35px;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    background: #07c5ff;
+    color: #000;
+}
+
+.link-button:hover{
+    background: #239600;
+    color: #ffffff;
+}
+
+span{
+    color: red;
+    text-align: right;
+    font: bold;
+    font-style: italic;
+    font-family: verdana;
+}
+
+select{
+    height: 25px;
+    border-radius: 5px;
+    color: #ffffff;
+    background: #000000a4;
+    margin: 10px;
+}
